@@ -1,0 +1,6 @@
+[submodule ".vim"]
+	path = .vim
+	url = git@bitbucket.org:teleele/.vim.git
+[submodule ".tmux"]
+	path = .tmux
+	url = git@bitbucket.org:teleele/.tmux.git
