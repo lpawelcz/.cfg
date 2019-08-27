@@ -150,7 +150,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 alias config='/usr/bin/git --git-dir=/home/korzen/.cfg/ --work-tree=/home/korzen'
 
 export PATH=$PATH:/$HOME/work/arduino_ide/arduino:$HOME/work/esp/crosstool-NG/builds/xtensa-esp32-elf/bin
-
 export IDF_PATH=~/work/esp/esp-idf
-
 export COLORTERM=truecolor
+export EDITOR=vim
+export VIEWER=vim
