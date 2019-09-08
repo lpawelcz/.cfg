@@ -46,3 +46,8 @@ let g:airline_theme='dark'
 
 " set path for fzf
 set rtp+=~/.fzf
+
+" Tagbar keybindings
+nmap <silent> <F9> :TagbarToggle<CR>
+nmap <silent> <F8> :TagbarClose<CR>:let g:tagbar_left = 1<CR>:TagbarOpen<CR>
+nmap <silent> <F10> :TagbarClose<CR>:let g:tagbar_left = 0<CR>:TagbarOpen<CR>
