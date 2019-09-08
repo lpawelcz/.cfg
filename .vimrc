@@ -35,6 +35,8 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" set statusline theme https://github.com/vim-airline/vim-airline-themes
+let g:airline_theme='dark'
 " Color scheme (terminal)
 " set background=dark
 " let g:solarized_termcolors=256
