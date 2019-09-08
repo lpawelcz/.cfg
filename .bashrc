@@ -49,7 +49,6 @@ esac
 
 use_color=true
 
-HISTCONTROL=ignoreboth
 
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
@@ -143,11 +142,11 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+# ignore history commands in bash history
+HISTCONTROL=ignoreboth
 
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-
-alias config='/usr/bin/git --git-dir=/home/korzen/.cfg/ --work-tree=/home/korzen'
 
 export PATH=$PATH:/$HOME/work/arduino_ide/arduino:$HOME/work/esp/crosstool-NG/builds/xtensa-esp32-elf/bin
 export IDF_PATH=~/work/esp/esp-idf
