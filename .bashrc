@@ -154,3 +154,4 @@ export IDF_PATH=~/work/esp/esp-idf
 export COLORTERM=truecolor
 export EDITOR=vim
 export VIEWER=vim
+
