@@ -154,3 +154,5 @@ export COLORTERM=truecolor
 export EDITOR=vim
 export VIEWER=vim
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

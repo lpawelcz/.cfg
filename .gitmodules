@@ -4,3 +4,6 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = https://teleele@bitbucket.org/teleele/.tmux.git
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git
