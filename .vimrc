@@ -33,7 +33,9 @@ set list lcs=tab:\|\
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
+colorscheme molokai
+" let g:molokai_original = 1
 
 " set statusline theme https://github.com/vim-airline/vim-airline-themes
 let g:airline_theme='dark'
