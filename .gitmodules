@@ -1,9 +1,9 @@
 [submodule ".vim"]
 	path = .vim
-	url = https://teleele@bitbucket.org/teleele/.vim.git
+	url = https://github.com/lpawelcz/.vim.git
 [submodule ".tmux"]
 	path = .tmux
-	url = https://teleele@bitbucket.org/teleele/.tmux.git
+	url = https://github.com/lpawelcz/.tmux.git
 [submodule ".fzf"]
 	path = .fzf
 	url = https://github.com/junegunn/fzf.git

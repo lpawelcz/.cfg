@@ -38,7 +38,7 @@ colorscheme molokai
 " let g:molokai_original = 1
 
 " set statusline theme https://github.com/vim-airline/vim-airline-themes
-let g:airline_theme='dark'
+let g:airline_theme='simple'
 " Color scheme (terminal)
 " set background=dark
 " let g:solarized_termcolors=256
