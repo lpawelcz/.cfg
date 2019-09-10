@@ -2,6 +2,11 @@
 # ~/.bashrc
 #
 
+export PATH=$PATH:~/opt/Xilinx/bin:/home/pczarnecki/work/litex_linux/litex-linux-on-litex-vexriscv/riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14/bin/:/opt/riscv/bin
+export ARCH=riscv
+export export CROSS_COMPILE=riscv64-unknown-linux-gnu-
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=$HOME/zephyr-sdk-0.10.1
 [[ $- != *i* ]] && return
 
 colors() {
@@ -46,6 +51,9 @@ case ${TERM} in
 		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
 		;;
 esac
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 use_color=true
 
@@ -95,11 +103,12 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
+# alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
+
 
 xhost +local:root > /dev/null 2>&1
 
@@ -145,14 +154,8 @@ ex ()
 # ignore history commands in bash history
 HISTCONTROL=ignoreboth
 
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-
-export PATH=$PATH:/$HOME/work/arduino_ide/arduino:$HOME/work/esp/crosstool-NG/builds/xtensa-esp32-elf/bin
-export IDF_PATH=~/work/esp/esp-idf
 export COLORTERM=truecolor
 export EDITOR=vim
 export VIEWER=vim
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

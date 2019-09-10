@@ -1,13 +1,13 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/korzen/.fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}/home/korzen/.fzf/bin"
+if [[ ! "$PATH" == */home/pczarnecki/.fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/home/pczarnecki/.fzf/bin"
 fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/korzen/.fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/home/pczarnecki/.fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/korzen/.fzf/shell/key-bindings.bash"
+source "/home/pczarnecki/.fzf/shell/key-bindings.bash"
