@@ -5,7 +5,7 @@ alias makegcc='make gcc/download'
 alias makelitex='make litex/gen'
 alias makexc3='make xc3/compile'
 alias makeupload='make litex/upload'
-alias pico='sudo picocom -b 115200 /dev/ttyUSB1 --imap lfcrlf'
+alias pico='picocom -b 115200 /dev/ttyUSB1 --imap lfcrlf'
 
 alias makeclean='make gcc/clean ; make litex/clean ; make xc3/clean'
 
@@ -27,3 +27,7 @@ alias make='make -j 8'
 
 alias ll='ls -l'
 alias lla='ls -la'
+alias zephyr_entrophy='cd .. && rm -rf build && source ~/work/prbs/litex-vexriscv-build/zephyr/zephyr-env.sh && mkdir build && cd build && litexterm && cmakelitex && make -j $(nproc) && sudo ./litex_term.py --serial-boot --kernel ~/work/prbs/litex-vexriscv-build/zephyr/samples/drivers/entropy/build/zephyr/zephyr.bin /dev/ttyUSB1'
+alias zephyr_pwm='cd .. && rm -rf build && source ~/work/prbs/litex-vexriscv-build/zephyr/zephyr-env.sh && mkdir build && cd build && litexterm && cmakelitex && make -j $(nproc) && sudo ./litex_term.py --serial-boot --kernel ~/work/prbs/litex-vexriscv-build/zephyr/tests/drivers/pwm/pwm_api/build/zephyr/zephyr.bin /dev/ttyUSB1'
+alias makegate='export CPU=mor1kx TARGET=net CPU_VARIANT=linux FIRMWARE=linux PLATFORM=arty && source ./scripts/enter-env.sh && make gateware gateware-load'
+alias cpopenrisc='cp ~/work/litex_openrisc/litex-buildenv/build/arty_net_mor1kx.linux/software/linux/arch/openrisc/boot/vmlinux.bin /tftpboot/boot.bin'
