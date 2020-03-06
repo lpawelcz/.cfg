@@ -19,11 +19,12 @@ alias rldzephyr='make ; sudo ./litex_term.py --serial-boot --kernel ~/work/litex
 alias linuxbuild='./make.py --board=arty --build'
 alias linuxload='./make.py --board=arty --load'
 alias ethinit='sudo ifconfig enx00e04c34f4f9 192.168.1.100'
+alias ethint='sudo ifconfig enx00e04c34f548 192.168.1.100'
 alias cpimg='cp arch/riscv/boot/Image /tftpboot/'
-alias cpdtb='cp arch/riscv/boot/dts/litex_vexriscv_arty.dtb /tftpboot/rv32.dtb'
+alias cpdtb='cp arch/riscv/boot/dts/litex/litex_vexriscv_arty.dtb /tftpboot/rv32.dtb'
 alias cpkern='cpimg && cpdtb'
 alias makern='make && ( cpkern && echo copied files ) || echo copying files prevented, build error'
-alias make='make -j 8'
+alias makef='make -j $(nproc)'
 
 alias ll='ls -l'
 alias lla='ls -la'
@@ -31,3 +32,8 @@ alias zephyr_entrophy='cd .. && rm -rf build && source ~/work/prbs/litex-vexrisc
 alias zephyr_pwm='cd .. && rm -rf build && source ~/work/prbs/litex-vexriscv-build/zephyr/zephyr-env.sh && mkdir build && cd build && litexterm && cmakelitex && make -j $(nproc) && sudo ./litex_term.py --serial-boot --kernel ~/work/prbs/litex-vexriscv-build/zephyr/tests/drivers/pwm/pwm_api/build/zephyr/zephyr.bin /dev/ttyUSB1'
 alias makegate='export CPU=mor1kx TARGET=net CPU_VARIANT=linux FIRMWARE=linux PLATFORM=arty && source ./scripts/enter-env.sh && make gateware gateware-load'
 alias cpopenrisc='cp ~/work/litex_openrisc/litex-buildenv/build/arty_net_mor1kx.linux/software/linux/arch/openrisc/boot/vmlinux.bin /tftpboot/boot.bin'
+alias buildenvcprv='cp ~/work/litex_openrisc/litex-buildenv/build/arty_net_vexriscv.linux/software/linux/arch/riscv/boot/Image /tftpboot/ && cp ~/work/litex_openrisc/litex-buildenv/build/arty_net_vexriscv.linux/software/linux/riscv32-rootfs.cpio /tftpboot/rootfs.cpio &&
+cp ~/work/litex_openrisc/litex-buildenv/build/arty_net_vexriscv.linux/software/linux/rv32.dtb /tftpboot/ && cp ~/work/litex_openrisc/litex-buildenv/build/arty_net_vexriscv.linux/emulator/emulator.bin /tftpboot/ && echo copied'
+alias gs='git status'
+alias gc='git commit'
+alias gco='git checkout'

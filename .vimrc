@@ -51,6 +51,15 @@ set rtp+=~/.fzf
 nmap <silent> <F6> :Files<CR>
 nmap <silent> <F7> :Buffers<CR>
 " Tagbar keybindings
-nmap <silent> <F8> :TagbarClose<CR>:let g:tagbar_left = 1<CR>:TagbarOpen<CR>
 nmap <silent> <F9> :TagbarToggle<CR>
-nmap <silent> <F10> :TagbarClose<CR>:let g:tagbar_left = 0<CR>:TagbarOpen<CR>
+nmap <silent> <F10> :call TagbarSideToggle()<CR>
+
+function! TagbarSideToggle()
+    :TagbarClose
+    if g:tagbar_left
+        :let g:tagbar_left = 0
+    else
+        :let g:tagbar_left = 1
+    endif
+    :TagbarOpen
+endfunction

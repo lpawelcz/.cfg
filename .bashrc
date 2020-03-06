@@ -2,11 +2,11 @@
 # ~/.bashrc
 #
 
-export PATH=$PATH:~/opt/Xilinx/bin:/home/pczarnecki/work/litex_linux/litex-linux-on-litex-vexriscv/riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14/bin/:/opt/riscv/bin
+export PATH=$PATH:~/opt/Xilinx/bin:/opt/riscv/bin:/opt/toolchains/or1k-elf/bin:/opt/toolchains/riscv64-unknown-elf/bin:/home/pczarnecki/work/renode:~/.local/bin
 export ARCH=riscv
 export export CROSS_COMPILE=riscv64-unknown-linux-gnu-
 export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=$HOME/zephyr-sdk-0.10.1
+export ZEPHYR_SDK_INSTALL_DIR=/home/pczarnecki/zephyr-sdk-0.11.1
 [[ $- != *i* ]] && return
 
 colors() {
@@ -157,5 +157,7 @@ HISTCONTROL=ignoreboth
 export COLORTERM=truecolor
 export EDITOR=vim
 export VIEWER=vim
+
+eval "$(direnv hook bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
