@@ -1,0 +1,83 @@
+IMAPStore czarneckilp-remote
+Host imap.gmail.com
+Port  993
+User czarnecki.l.p@gmail.com
+PassCmd "pass mutt-wizard-czarneckilp"
+AuthMechs LOGIN
+SSLType IMAPS
+AuthMech LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore czarneckilp-local
+Subfolders Verbatim
+Path ~/.local/share/mail/czarneckilp/
+Inbox ~/.local/share/mail/czarneckilp/INBOX
+Flatten .
+
+Channel czarneckilp
+Expunge Both
+Master :czarneckilp-remote:
+Slave :czarneckilp-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore telerich-remote
+Host imap.gmail.com
+Port  993
+User telerich97@gmail.com
+PassCmd "pass mutt-wizard-telerich"
+AuthMechs LOGIN
+SSLType IMAPS
+AuthMech LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore telerich-local
+Subfolders Verbatim
+Path ~/.local/share/mail/telerich/
+Inbox ~/.local/share/mail/telerich/INBOX
+Flatten .
+
+Channel telerich
+Expunge Both
+Master :telerich-remote:
+Slave :telerich-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+
+
+IMAPStore student-pwr-remote
+Host student.pwr.wroc.pl
+Port  993
+User 234974
+PassCmd "pass mutt-wizard-student-pwr"
+AuthMechs LOGIN
+SSLType IMAPS
+AuthMech LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore student-pwr-local
+Subfolders Verbatim
+Path ~/.local/share/mail/student-pwr/
+Inbox ~/.local/share/mail/student-pwr/INBOX
+Flatten .
+
+Channel student-pwr
+Expunge Both
+Master :student-pwr-remote:
+Slave :student-pwr-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+

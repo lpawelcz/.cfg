@@ -1,0 +1,14 @@
+[database]
+path=/home/korzen/.local/share/mail
+[user]
+name=Paweł Czarnecki
+primary_email=czarnecki.l.p@gmail.com
+[new]
+tags=unread;inbox;
+ignore=
+[search]
+exclude_tags=deleted;spam;
+[maildir]
+synchronize_flags=true
+[crypto]
+gpg_path=gpg
