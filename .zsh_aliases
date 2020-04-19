@@ -1,0 +1,21 @@
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias more=less
+alias ll='ls -l'
+alias lla='ls -la'
+alias makef='make -j 8'
+alias pacf='pacman -Slq | fzf -m --preview '"'"'pacman -Si {1}'"'"' | xargs -ro sudo pacman -S'
+
+# GIT
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gd='git diff'
+
+# Dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

@@ -1,0 +1,4 @@
+export PATH=$PATH:$HOME/scripts/statusbar
+export EDITOR=vim
+export VIEWER=vim
+export BROWSER=firefox
