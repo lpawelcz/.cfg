@@ -11,41 +11,53 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-
 set t_Co=256
+
 syntax on
+
 " Show line numbers
 set number
 
+" relative numbering
+set relativenumber
+
 " Show file stats
-set ruler
+" set ruler
 
 " Encoding
 set encoding=utf-8
 
+" tags lookup
 set tags=./tags,tags;
 
 set list lcs=tab:\|\ 
 
-" Enable NERDTree
-"autocmd vimenter * NERDTree
-
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
-" colorscheme solarized
+
+" set colorscheme
 colorscheme molokai
-" let g:molokai_original = 1
+
+" colorscheme transparency
+:hi Normal ctermbg=none
+:hi LineNr ctermbg=none
+:hi NonText ctermbg=none
+
+" Color line numbers
+:hi LineNr ctermfg=yellow
+
+" highlight current line
+set cursorline
 
 " set statusline theme https://github.com/vim-airline/vim-airline-themes
-let g:airline_theme='simple'
-" Color scheme (terminal)
-" set background=dark
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
+" let g:airline_theme='simple'
+let g:airline_theme='lucius'
 
 " set path for fzf
 set rtp+=~/.fzf
+
+" change line numbering
+nmap <silent> <F7> :set number! relativenumber!<CR>
+nmap <silent> <leader><F7> :set relativenumber!<CR>
 
 " Tagbar keybindings
 nmap <silent> <F9> :TagbarToggle<CR>
