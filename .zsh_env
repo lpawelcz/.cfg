@@ -1,4 +1,4 @@
-export PATH=$PATH:$HOME/scripts/statusbar
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR=vim
 export VIEWER=vim
 export BROWSER=firefox

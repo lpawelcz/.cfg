@@ -7,3 +7,6 @@
 [submodule ".fzf"]
 	path = .fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".local/bin"]
+	path = .local/bin
+	url = git@github.com:lpawelcz/scripts.git
